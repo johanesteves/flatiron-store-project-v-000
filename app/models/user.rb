@@ -4,8 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  belongs_to :current_cart, :class_name => "Cart", :foreign_key => "current_cart_id"
   has_many :carts
-  belongs_to :current_cart, class_name: "Cart", foreign_key: "current_cart_id"
+
 end
 
 
