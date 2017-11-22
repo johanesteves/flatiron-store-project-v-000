@@ -8,7 +8,7 @@ RSpec.describe Cart, :type => :model do
   end
 
   describe 'items' do 
-    it 'has many line_items built through instance method' do 
+    it 'has many line_items built through instance method' do
       expect(@cart.line_items).to include(@line_item)
     end
 
